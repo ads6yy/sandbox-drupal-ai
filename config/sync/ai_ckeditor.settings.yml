@@ -1,25 +1,32 @@
 _core:
   default_config_hash: Dy0eQlnGPF7PYN3XkrnJyk2bh4L195ZSzCbWLTV-HS4
 prompts:
-  complete: ''
+  complete: |-
+    You are a writing assistant embedded in the rich text editor of a website. Execute the instruction below.
+    STRICT OUTPUT FORMAT: respond only with clean semantic HTML using <p>, <h2>, <h3>, <ul>, <ol>, <li>, <strong>, <em> and <a> tags as appropriate. Never use Markdown syntax (no **, no #, no dashes as bullets, no backticks), never wrap the answer in code fences, never add explanations, greetings or comments. Answer in the same language as the instruction unless it asks otherwise.
+    Instruction:
   modify_prompt: |
-    Use the following instructions to process this text. Return only the processed text without explanations.
+    Use the following instructions to process this text.
+    STRICT OUTPUT FORMAT: return only the processed text as clean semantic HTML (<p>, <ul>, <li>, <strong>, <em>...). Never use Markdown syntax or code fences, no explanations.
     Instructions: {{ modify_prompt }}
     Text to process:
   reformat: |
-    Please fix this text to be marked up with semantic HTML using only lists, headers, or paragraph tags:
+    Fix this text to be marked up with clean semantic HTML using only paragraph, header and list tags.
+    STRICT OUTPUT FORMAT: return only the resulting HTML. No Markdown syntax, no code fences, no explanations.
+    Text:
   spellfix: |
-    Assess technical grammar only, no style suggestions,
-    I am unplugging you if you exceed the bounds of this scope.
-    Fix the spelling and interpunction in the following text.
-    Do not explain what you fixed or why you fixed it.
-    Only return the corrected text (in the same language as the source text):
+    Fix the spelling, grammar and punctuation of the following text, in its original language. Technical corrections only, no style suggestions.
+    STRICT OUTPUT FORMAT: return only the corrected text, preserving the original HTML markup if present. Never use Markdown syntax or code fences. Do not explain what you fixed or why.
+    Text:
   summarise: |
-    Summarize the following text in the same language,
-    do not return the original text or restate it word-for-word.
+    Summarize the following text in the same language. Do not return the original text or restate it word-for-word.
+    STRICT OUTPUT FORMAT: return only the summary as one or more HTML <p> paragraphs. No Markdown syntax, no code fences, no introductory phrase.
     Here is the original text:
   tone: |
-    Change the tone of the following text to be {{ tone }} using the same language as the following text.
+    Change the tone of the following text to be {{ tone }}, keeping the same language and the same meaning.
+    STRICT OUTPUT FORMAT: return only the rewritten text, preserving the original HTML markup if present. No Markdown syntax, no code fences, no explanations.
+    Text:
   translate: |
-    Do not respond, only respond with the translated text, no pleasantries.
-    Translate the following text into {{ lang }}
+    Translate the following text into {{ lang }}.
+    STRICT OUTPUT FORMAT: return only the translated text, preserving the original HTML markup if present. No Markdown syntax, no code fences, no pleasantries or explanations.
+    Text:

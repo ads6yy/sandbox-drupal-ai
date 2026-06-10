@@ -46,34 +46,31 @@ settings:
       plugins:
         ai_ckeditor_completion:
           enabled: true
-          provider: gemini__models/gemini-3.1-flash-lite
+          provider: ''
         ai_ckeditor_help:
-          enabled: false
+          enabled: true
+          provider: ''
         ai_ckeditor_modify_prompt:
           enabled: true
-          provider: gemini__models/gemini-3.1-flash-lite
+          provider: ''
         ai_ckeditor_reformat_html:
           enabled: true
-          provider: gemini__models/gemini-3.1-flash-lite
+          provider: ''
         ai_ckeditor_spellfix:
           enabled: true
-          provider: gemini__models/gemini-3.1-flash-lite
+          provider: ''
         ai_ckeditor_summarize:
           enabled: true
-          provider: gemini__models/gemini-3.1-flash-lite
+          provider: ''
         ai_ckeditor_tone:
-          enabled: true
-          provider: gemini__models/gemini-3.1-flash-lite
+          enabled: false
+          provider: ''
           autocreate: false
-          tone_vocabulary: tones
-          use_description: true
-        ai_ckeditor_translate:
-          enabled: true
-          provider: gemini__models/gemini-3.1-flash-lite
-          language_source: tax
-          autocreate: false
-          translate_vocabulary: tags
+          tone_vocabulary: ''
           use_description: false
+        ai_ckeditor_translate:
+          enabled: false
+          provider: ''
     ckeditor5_codeBlock:
       languages:
         -

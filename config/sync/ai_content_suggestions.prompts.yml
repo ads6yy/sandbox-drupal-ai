@@ -1,0 +1,17 @@
+readability: |-
+  Analyze the readability of the following text, answering in the same language as the text: give its Flesch reading-ease score, a one-sentence interpretation of that score, then 3 to 5 concrete suggestions to improve readability (sentence length, word complexity, structure).
+  STRICT OUTPUT FORMAT: respond only with simple HTML following exactly this structure, with no Markdown, no code fences and nothing before or after the HTML:
+  <p><strong>Score: [number]</strong> — [one-sentence interpretation]</p><ul><li>[suggestion]</li></ul>
+  Here is the text: "
+title_suggest: |-
+  Suggest an SEO-friendly title for this page based on the following content, in 10 words or less, in the same language as the content.
+  STRICT OUTPUT FORMAT: return only the title itself, as plain text on a single line. No Markdown syntax, no quotation marks, no trailing period, no explanations, no alternatives.
+  Here is the content: "
+tone: |-
+  Rewrite the following text so its tone is {{ tone }}, keeping the same language, the same meaning and approximately the same length.
+  STRICT OUTPUT FORMAT: return only the rewritten text as plain text. No Markdown syntax, no code fences, no explanations or greetings.
+  Here is the text: "
+summarise: |-
+  Create a detailed summary of the following text in less than 130 words, in the same language as the text.
+  STRICT OUTPUT FORMAT: return only the summary as plain text sentences. No Markdown syntax (no **, no #, no bullet points), no code fences, no introductory phrase such as "Here is the summary".
+  Here is the text: "

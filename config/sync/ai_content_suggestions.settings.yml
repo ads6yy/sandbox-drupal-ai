@@ -11,14 +11,15 @@ field_widget_prompt: |
   ]
   ```
   If you are enable to generate a response, respond with "Insufficient information provided, please add more data before generating suggestions."
-plugins: {  }
+  Each "suggestion" value must be plain text only: no Markdown syntax, no HTML tags, no code fences.
+plugins:
+  readability: gemini__models/gemini-3.1-flash-lite
+  summarise: gemini__models/gemini-3.1-flash-lite
+  title_suggest: gemini__models/gemini-3.1-flash-lite
+  tone: gemini__models/gemini-3.1-flash-lite
 entity_types:
   node:
-    bundles: {  }
-    mode: disable
-  taxonomy_term:
-    bundles: {  }
-    mode: disable
-  block_content:
-    bundles: {  }
-    mode: disable
+    bundles:
+      article: article
+      page: page
+    mode: enable
