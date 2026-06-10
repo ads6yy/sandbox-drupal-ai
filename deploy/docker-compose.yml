@@ -1,0 +1,44 @@
+services:
+  mariadb:
+    container_name: drupal-ai-mariadb
+    build:
+      context: ./db
+      target: client_db
+    restart: on-failure
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - drupal-ai-data:/var/lib/mysql
+      - ./db/my.cnf:/etc/mysql/conf.d/my.cnf:ro
+    ports:
+      - "3703:3306"
+
+  php:
+    build:
+      context: ./php
+      target: client_php
+    volumes:
+      - ../:/srv
+      - ./php/php.ini:/usr/local/etc/php/conf.d/000-php.ini
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      DB_NAME: ${DB_NAME}
+
+  nginx:
+    image: nginx:alpine
+    volumes:
+      - ../:/srv
+      - ./nginx/config/nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+    ports:
+      - '8703:80'
+
+volumes:
+  drupal-ai-data: {}
