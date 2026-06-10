@@ -45,30 +45,30 @@ settings:
         dialog_class: ai-ckeditor-modal
       plugins:
         ai_ckeditor_completion:
-          enabled: false
+          enabled: true
           provider: gemini__models/gemini-3.1-flash-lite
         ai_ckeditor_help:
           enabled: false
         ai_ckeditor_modify_prompt:
-          enabled: false
+          enabled: true
           provider: gemini__models/gemini-3.1-flash-lite
         ai_ckeditor_reformat_html:
-          enabled: false
+          enabled: true
           provider: gemini__models/gemini-3.1-flash-lite
         ai_ckeditor_spellfix:
-          enabled: false
+          enabled: true
           provider: gemini__models/gemini-3.1-flash-lite
         ai_ckeditor_summarize:
-          enabled: false
+          enabled: true
           provider: gemini__models/gemini-3.1-flash-lite
         ai_ckeditor_tone:
-          enabled: false
+          enabled: true
           provider: gemini__models/gemini-3.1-flash-lite
           autocreate: false
-          tone_vocabulary: tags
-          use_description: false
+          tone_vocabulary: tones
+          use_description: true
         ai_ckeditor_translate:
-          enabled: false
+          enabled: true
           provider: gemini__models/gemini-3.1-flash-lite
           language_source: tax
           autocreate: false
