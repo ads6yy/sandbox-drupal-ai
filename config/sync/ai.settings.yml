@@ -1,0 +1,34 @@
+_core:
+  default_config_hash: WWvo9_41v-oaqjbKdBtohSrem-s9w-7MIfvCWjZvAI4
+prompt_logging: false
+prompt_logging_tags: ''
+default_providers:
+  chat:
+    provider_id: gemini
+    model_id: models/gemini-3.1-flash-lite
+  chat_with_complex_json:
+    provider_id: gemini
+    model_id: models/gemini-3.1-flash-lite
+  chat_with_image_vision:
+    provider_id: gemini
+    model_id: models/gemini-3.1-flash-lite
+  chat_with_structured_response:
+    provider_id: gemini
+    model_id: models/gemini-3.1-flash-lite
+  chat_with_tools:
+    provider_id: gemini
+    model_id: models/gemini-3.1-flash-lite
+  speech_to_text:
+    provider_id: gemini
+    model_id: models/gemini-3.1-flash-lite
+  text_to_image:
+    provider_id: gemini
+    model_id: models/gemini-2.5-flash-image
+  text_to_speech:
+    provider_id: gemini
+    model_id: models/gemini-3.1-flash-tts-preview
+default_vdb_provider: ''
+request_timeout: 60
+allowed_hosts: {  }
+allowed_hosts_rewrite_links: false
+global_guardrails: {  }
