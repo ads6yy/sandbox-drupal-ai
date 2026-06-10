@@ -63,8 +63,12 @@ settings:
           tone_vocabulary: ''
           use_description: false
         ai_ckeditor_translate:
-          enabled: false
+          enabled: true
           provider: ''
+          language_source: lang
+          autocreate: false
+          translate_vocabulary: ''
+          use_description: false
     ckeditor5_heading:
       enabled_headings:
         - heading2

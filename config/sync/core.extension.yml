@@ -30,6 +30,7 @@ module:
   history: 0
   image: 0
   key: 0
+  language: 0
   link: 0
   menu_link_content: 0
   menu_ui: 0
@@ -48,6 +49,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  content_translation: 10
   views: 10
   standard: 1000
 theme:
