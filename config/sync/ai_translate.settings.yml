@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: IaNiyCLAJBz5QfQqeZ_MxVRVs4KYTOMlVpf9wFrIVKk
+use_ai_translate: true
+reference_defaults: {  }
+prompt: ai_translate__ai_translate_default
+entity_reference_depth: 1
+language_settings:
+  fr:
+    model: ''
+    prompt: ai_translate__ai_translate_default
+  en:
+    model: ''
+    prompt: ai_translate__ai_translate_default
+translation_status: keep_original
+redirect_after_create: list

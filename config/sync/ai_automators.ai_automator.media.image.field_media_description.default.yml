@@ -1,0 +1,35 @@
+uuid: 4854be8e-64b2-4f9e-9f8f-2d501e268be3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_media_description
+id: media.image.field_media_description.default
+label: 'Description média par vision'
+rule: llm_text_long
+input_mode: base
+weight: 100
+worker_type: direct
+entity_type: media
+bundle: image
+field_name: field_media_description
+edit_mode: false
+base_field: name
+prompt: 'Look at the attached image and write an editorial description of 2-3 sentences in French. Plain text only: no Markdown, no HTML, no preamble. Media name as extra context: {{ context }}'
+token: ''
+guardrail_set_id: null
+plugin_config:
+  automator_enabled: 1
+  automator_mode: base
+  automator_base_field: name
+  automator_token: ''
+  automator_edit_mode: 0
+  automator_weight: '100'
+  automator_ai_provider: default_vision
+  automator_ai_model: ''
+  automator_configuration_image_field: field_media_image
+  automator_configuration_image_style: large
+  automator_rule: llm_text_long
+  automator_prompt: 'Look at the attached image and write an editorial description of 2-3 sentences in French. Plain text only: no Markdown, no HTML, no preamble. Media name as extra context: {{ context }}'
+  automator_label: 'Description média par vision'
+  automator_worker_type: direct

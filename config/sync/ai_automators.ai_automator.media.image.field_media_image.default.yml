@@ -1,0 +1,35 @@
+uuid: 76816059-1f01-4563-aa3b-64986941f039
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_media_image
+id: media.image.field_media_image.default
+label: 'Renommage SEO du fichier image'
+rule: llm_rewrite_image_filename
+input_mode: base
+weight: 100
+worker_type: field_widget_actions
+entity_type: media
+bundle: image
+field_name: field_media_image
+edit_mode: false
+base_field: name
+prompt: 'Look at the attached image and create a short descriptive SEO-friendly filename in French based on the image content: 3 to 6 words, lowercase, hyphens instead of spaces, no accents, no special characters. Current media name as extra context: {{ context }}'
+token: ''
+guardrail_set_id: null
+plugin_config:
+  automator_enabled: 1
+  automator_mode: base
+  automator_base_field: name
+  automator_token: ''
+  automator_edit_mode: 0
+  automator_weight: '100'
+  automator_ai_provider: default_vision
+  automator_ai_model: ''
+  automator_configuration_image_field: field_media_image
+  automator_configuration_image_style: large
+  automator_rule: llm_rewrite_image_filename
+  automator_prompt: 'Look at the attached image and create a short descriptive SEO-friendly filename in French based on the image content: 3 to 6 words, lowercase, hyphens instead of spaces, no accents, no special characters. Current media name as extra context: {{ context }}'
+  automator_label: 'Renommage SEO du fichier image'
+  automator_worker_type: field_widget_actions

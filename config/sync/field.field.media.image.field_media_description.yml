@@ -1,0 +1,22 @@
+uuid: 8731d3cc-cf9c-434b-a494-9f180b6632b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_description
+    - media.type.image
+  module:
+    - text
+id: media.image.field_media_description
+field_name: field_media_description
+entity_type: media
+bundle: image
+label: 'Description (IA)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

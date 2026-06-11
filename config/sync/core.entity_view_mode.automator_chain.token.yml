@@ -1,0 +1,11 @@
+uuid: 43a65683-b25e-4150-a1a1-7460a6a6dfa3
+langcode: en
+status: true
+dependencies:
+  module:
+    - ai_automators
+id: automator_chain.token
+label: Token
+description: null
+targetEntityType: automator_chain
+cache: true

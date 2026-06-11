@@ -27,6 +27,9 @@ default_providers:
   text_to_speech:
     provider_id: gemini
     model_id: models/gemini-3.1-flash-tts-preview
+  translate_text:
+    provider_id: chat_translation
+    model_id: models/gemini-3.1-flash-lite
 default_vdb_provider: ''
 request_timeout: 60
 allowed_hosts: {  }

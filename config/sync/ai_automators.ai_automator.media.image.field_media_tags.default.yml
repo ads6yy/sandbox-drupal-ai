@@ -1,0 +1,37 @@
+uuid: d82207a0-1834-43c8-8503-721b42934c50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_media_tags
+id: media.image.field_media_tags.default
+label: 'Tags média par vision'
+rule: llm_taxonomy
+input_mode: base
+weight: 100
+worker_type: direct
+entity_type: media
+bundle: image
+field_name: field_media_tags
+edit_mode: false
+base_field: name
+prompt: 'Look at the attached image and provide between 3 and 6 short tags in French (1-2 words each, lowercase) describing the main subjects, the style and the mood of the image. Media name as extra context: {{ context }}'
+token: ''
+guardrail_set_id: null
+plugin_config:
+  automator_enabled: 1
+  automator_mode: base
+  automator_base_field: name
+  automator_token: ''
+  automator_edit_mode: 0
+  automator_weight: '100'
+  automator_ai_provider: default_vision
+  automator_ai_model: ''
+  automator_configuration_image_field: field_media_image
+  automator_configuration_image_style: large
+  automator_rule: llm_taxonomy
+  automator_prompt: 'Look at the attached image and provide between 3 and 6 short tags in French (1-2 words each, lowercase) describing the main subjects, the style and the mood of the image. Media name as extra context: {{ context }}'
+  automator_label: 'Tags média par vision'
+  automator_worker_type: direct
+  automator_clean_up: lowercase
+  automator_search_similar_tags: 0
