@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Ajustements UI de la sandbox Drupal AI.
+ */
+
+/**
+ * Implements hook_page_attachments().
+ */
+function sandbox_tweaks_page_attachments(array &$attachments): void {
+  $attachments['#attached']['library'][] = 'sandbox_tweaks/chatbot-overrides';
+}

@@ -1,0 +1,5 @@
+name: Sandbox Tweaks
+description: 'Ajustements UI de la sandbox Drupal AI (z-index du chatbot, etc.).'
+type: module
+package: Custom
+core_version_requirement: ^11

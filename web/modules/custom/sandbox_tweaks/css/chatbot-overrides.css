@@ -1,0 +1,14 @@
+/**
+ * Le widget DeepChat est en position: fixed mais reste prisonnier du contexte
+ * d'empilement de la région qui l'héberge. Dans Olivero, .site-footer est un
+ * contexte à z-index: 1 et .layout-main-wrapper à z-index: 2 : un bloc placé
+ * dans le footer peint donc TOUJOURS sous le contenu, quel que soit son
+ * z-index. Le bloc est désormais placé dans la région content_below (dans le
+ * wrapper principal) ; cette règle sécurise en plus le z-index du wrapper du
+ * bloc au niveau de celui du chat (1258), sous les modales Drupal (1260).
+ */
+.block-ai-deepchat-block,
+.block-ai-deepchat-block.contextual-region {
+  position: relative;
+  z-index: 1258 !important;
+}

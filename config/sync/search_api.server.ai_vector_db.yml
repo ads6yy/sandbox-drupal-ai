@@ -1,0 +1,30 @@
+uuid: a49ee521-bf1b-4c3b-aa1c-0767c5d541b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - ai_search
+    - ai_vdb_provider_mariadb
+id: ai_vector_db
+name: 'AI Vector DB (MariaDB)'
+description: 'Stockage vectoriel natif MariaDB pour la recherche sémantique.'
+backend: search_api_ai_search
+backend_config:
+  chat_model: ''
+  database: mariadb
+  database_settings:
+    database_name: drupal-ai
+    collection: rh_corpus
+    metric: cosine_similarity
+  embeddings_engine: gemini__models/gemini-embedding-001
+  embeddings_engine_configuration:
+    set_dimensions: false
+    dimensions: 3072
+  embedding_strategy: contextual_chunks
+  embedding_strategy_configuration:
+    chunk_size: '500'
+    chunk_min_overlap: '100'
+    contextual_content_max_percentage: '30'
+    skip_moderation: true
+  embedding_strategy_details: ''
+  include_raw_embedding_vector: false

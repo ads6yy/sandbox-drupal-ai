@@ -1,0 +1,40 @@
+uuid: 305126c8-a08f-447c-9f11-0a4c62d15041
+langcode: en
+status: true
+dependencies:
+  module:
+    - ai_chatbot
+  theme:
+    - olivero
+id: olivero_rh_chatbot
+theme: olivero
+region: content_below
+weight: 10
+provider: null
+plugin: ai_deepchat_block
+settings:
+  id: ai_deepchat_block
+  label: 'Novelia Assistant RH'
+  label_display: '0'
+  provider: ai_chatbot
+  ai_assistant: rh_assistant
+  bot_name: 'Novelia Assistant'
+  bot_image: /modules/contrib/ai/modules/ai_chatbot/assets/ai-icon-gradient.svg
+  use_username: 0
+  default_username: Vous
+  use_avatar: 0
+  default_avatar: ''
+  first_message: "Bonjour ! Je suis l'assistant RH de Novelia. Posez-moi vos questions sur les congés, le télétravail, les frais, le matériel…"
+  loading_message: 'Je consulte la documentation RH…'
+  stream: 0
+  toggle_state: open
+  width: 420px
+  height: 520px
+  placement: bottom-right
+  show_structured_results: false
+  show_copy_icon: true
+  collapse_minimal: false
+  style_file: 'module:ai_chatbot:chatgpt.yml'
+  verbose_mode: true
+  expansion_method: expand
+visibility: {  }

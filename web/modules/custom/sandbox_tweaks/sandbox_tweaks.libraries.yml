@@ -1,0 +1,4 @@
+chatbot-overrides:
+  css:
+    theme:
+      css/chatbot-overrides.css: {}

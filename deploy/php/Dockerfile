@@ -13,8 +13,8 @@ RUN apt-get update \
 RUN  docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ --with-webp=/usr/include/ \
      && docker-php-ext-install gd \
      && :\
-     && docker-php-ext-install pdo pdo_mysql opcache zip \
-     && docker-php-ext-enable pdo pdo_mysql opcache zip \
+     && docker-php-ext-install pdo pdo_mysql mysqli opcache zip \
+     && docker-php-ext-enable pdo pdo_mysql mysqli opcache zip \
      && docker-php-ext-install bcmath
 
 WORKDIR /srv

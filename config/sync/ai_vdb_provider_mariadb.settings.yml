@@ -1,0 +1,8 @@
+use_drupal_database: true
+host: ''
+port: null
+username: ''
+password: ''
+database: ''
+_core:
+  default_config_hash: TW3urE2dyuhWfRfg8tvQV76JNQoW_y2E0ro3JM7dUWM

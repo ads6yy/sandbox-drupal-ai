@@ -18,6 +18,9 @@ default_providers:
   chat_with_tools:
     provider_id: gemini
     model_id: models/gemini-3.1-flash-lite
+  embeddings:
+    provider_id: gemini
+    model_id: models/gemini-embedding-001
   speech_to_text:
     provider_id: gemini
     model_id: models/gemini-3.1-flash-lite
@@ -30,7 +33,7 @@ default_providers:
   translate_text:
     provider_id: chat_translation
     model_id: models/gemini-3.1-flash-lite
-default_vdb_provider: ''
+default_vdb_provider: mariadb
 request_timeout: 60
 allowed_hosts: {  }
 allowed_hosts_rewrite_links: false
