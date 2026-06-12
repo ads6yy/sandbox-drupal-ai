@@ -26,6 +26,7 @@
         "drupal/core-recommended": "^11.3",
         "drupal/gemini_provider": "^1.0",
         "drupal/gin": "^5.0",
+        "drupal/langfuse": "^1.0@alpha",
         "drupal/search_api": "^1.41",
         "drupal/token": "^1.17",
         "drush/drush": "^13.7"

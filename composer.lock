@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a597b43577477d18ad6699e8c1b1e528",
+    "content-hash": "490b4d661490517b7c9eab672e6423c4",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -958,6 +958,56 @@
                 }
             ],
             "time": "2024-02-05T11:56:58+00:00"
+        },
+        {
+            "name": "dropsolid/langfuse-php-sdk",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/dropsolid/langfuse-php-sdk.git",
+                "reference": "6a84c459964591ef9f8d1adaea9518a9490cd560"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/dropsolid%2Flangfuse-php-sdk/repository/archive.zip?sha=6a84c459964591ef9f8d1adaea9518a9490cd560",
+                "reference": "6a84c459964591ef9f8d1adaea9518a9490cd560",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.0",
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^12.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dropsolid\\LangFuse\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergiu Nagailic",
+                    "email": "sergiu.nagailic@dropsolid.com",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "A PHP SDK for the LangFuse API",
+            "keywords": [
+                "langfuse",
+                "langfuse php",
+                "langfuse sdk"
+            ],
+            "support": {
+                "issues": "https://gitlab.com/dropsolid/langfuse-php-sdk/-/issues",
+                "source": "https://gitlab.com/dropsolid/langfuse-php-sdk/-/tree/v1.2.0"
+            },
+            "time": "2025-07-31T19:42:36+00:00"
         },
         {
             "name": "drupal/ai",
@@ -1916,6 +1966,73 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/key",
                 "issues": "http://drupal.org/project/key"
+            }
+        },
+        {
+            "name": "drupal/langfuse",
+            "version": "1.0.2-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/langfuse.git",
+                "reference": "1.0.2-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/langfuse-1.0.2-alpha1.zip",
+                "reference": "1.0.2-alpha1",
+                "shasum": "fc77dd167f65c4b6c52b4b31539ff3388c8cd08c"
+            },
+            "require": {
+                "dropsolid/langfuse-php-sdk": "^1.2",
+                "drupal/core": "^10 || ^11",
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "drupal/ai": "*",
+                "drupal/ai-ai_search": "*",
+                "drupal/ai_agents": "*",
+                "drupal/core-dev": "*",
+                "drupal/search_api": "*",
+                "phpstan/phpstan": "^1.0"
+            },
+            "suggest": {
+                "drupal/ai": "Required for automatic AI.module integration and event-driven logging",
+                "openai-php/client": "Required for OpenAI demo form functionality"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.2-alpha1",
+                    "datestamp": "1765226936",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Sergiu Nagailic (Nikro)",
+                    "homepage": "https://www.drupal.org/user/383424",
+                    "email": "sergiu.nagailic@dropsolid.com"
+                },
+                {
+                    "name": "nielsaers",
+                    "homepage": "https://www.drupal.org/user/752444"
+                },
+                {
+                    "name": "nikro",
+                    "homepage": "https://www.drupal.org/user/576416"
+                }
+            ],
+            "description": "Drupal module for LangFuse integration",
+            "homepage": "https://www.drupal.org/project/langfuse",
+            "support": {
+                "source": "https://git.drupalcode.org/project/langfuse"
             }
         },
         {
@@ -7377,7 +7494,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "drupal/langfuse": 15
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {},

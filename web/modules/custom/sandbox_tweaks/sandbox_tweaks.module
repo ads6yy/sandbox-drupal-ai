@@ -11,3 +11,18 @@
 function sandbox_tweaks_page_attachments(array &$attachments): void {
   $attachments['#attached']['library'][] = 'sandbox_tweaks/chatbot-overrides';
 }
+
+/**
+ * Implements hook_js_settings_alter().
+ */
+function sandbox_tweaks_js_settings_alter(array &$settings, \Drupal\Core\Asset\AttachedAssetsInterface $assets): void {
+  // Le widget DeepChat embarque dans la page un token CSRF et un flag
+  // session_exists calculés au rendu. Avec le cache de page anonyme, les
+  // visiteurs suivants reçoivent un token périmé sans que le JS n'en
+  // redemande un (si session_exists est resté à TRUE dans la page cachée),
+  // d'où des 403 CSRF dans le chat. En forçant FALSE, le widget récupère
+  // toujours un token frais via le POST /api/deepchat/session (jamais caché).
+  if (isset($settings['ai_deepchat'])) {
+    $settings['ai_deepchat']['session_exists'] = FALSE;
+  }
+}

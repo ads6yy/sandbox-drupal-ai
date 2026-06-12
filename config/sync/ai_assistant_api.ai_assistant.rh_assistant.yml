@@ -96,6 +96,7 @@ actions_enabled:
       min_results: 1
       max_results: 8
       output_mode: chunks
+      access_check: true
 roles:
   anonymous: anonymous
   authenticated: authenticated

@@ -1,0 +1,13 @@
+_core:
+  default_config_hash: RuJrFbUI6bfa35PXK0h-VPb56HDbsii42RMIlHM24e8
+skip_validation: false
+langfuse_url: null
+timeout: 10.0
+auth_method: none
+bearer_token: null
+basic_auth:
+  username: null
+  password: null
+key_pair:
+  public_key: null
+  secret_key: null

@@ -37,6 +37,9 @@ module:
   history: 0
   image: 0
   key: 0
+  langfuse: 0
+  langfuse_ai_logging: 0
+  langfuse_ai_search_logging: 0
   language: 0
   link: 0
   media: 0
