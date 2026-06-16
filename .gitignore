@@ -23,6 +23,8 @@ $RECYCLE.BIN/
 
 # Site-specific settings and files.
 /web/sites/*/settings*.php
+# settings.php est versionné : 100 % env-based, aucun secret (cf. deploy/.env)
+!/web/sites/*/settings.php
 /web/sites/*/services*.yml
 /web/sites/*/files
 /web/sites/*/private
